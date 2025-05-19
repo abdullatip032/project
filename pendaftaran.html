@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran - SIPENA SMANIKA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/80" alt="Logo SMAN 1 Karangnunggal" class="logo">
+            <div class="header-text">
+                <h1>SIPENA SMANIKA</h1>
+                <p>SPMB SMAN 1 KARANGNUNGGAL</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="persyaratan.html">Persyaratan</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="#">Jurusan</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content-box full-width">
+            <h2>Formulir Pendaftaran Online</h2>
+            <p class="form-description">Silakan isi formulir berikut dengan data yang benar dan lengkap.</p>
+            
+            <form id="registration-form" action="proses_pendaftaran.php" method="POST" enctype="multipart/form-data">
+                <div class="form-section">
+                    <h3>Data Pribadi</h3>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nisn">NISN:</label>
+                        <input type="text" id="nisn" name="nisn" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tempat_lahir">Tempat Lahir:</label>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tanggal_lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required>
+                            <label for="laki">Laki-laki</label>
+                            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agama">Agama:</label>
+                        <select id="agama" name="agama" required>
+                            <option value="">Pilih Agama</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Buddha">Buddha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Data Alamat</h3>
+                    <div class="form-group">
+                        <label for="alamat">Alamat Lengkap:</label>
+                        <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kecamatan">Kecamatan:</label>
+                        <input type="text" id="kecamatan" name="kecamatan" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kabupaten">Kabupaten/Kota:</label>
+                        <input type="text" id="kabupaten" name="kabupaten" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="provinsi">Provinsi:</label>
+                        <input type="text" id="provinsi" name="provinsi" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kode_pos">Kode Pos:</label>
+                        <input type="text" id="kode_pos" name="kode_pos">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="no_hp">No. HP/WhatsApp:</label>
+                        <input type="tel" id="no_hp" name="no_hp" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Data Sekolah Asal</h3>
+                    <div class="form-group">
+                        <label for="sekolah_asal">Nama SMP/MTs:</label>
+                        <input type="text" id="sekolah_asal" name="sekolah_asal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tahun_lulus">Tahun Lulus:</label>
+                        <input type="number" id="tahun_lulus" name="tahun_lulus" min="2020" max="2024" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="no_ijazah">Nomor Ijazah:</label>
+                        <input type="text" id="no_ijazah" name="no_ijazah" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Pilihan Jurusan</h3>
+                    <div class="form-group">
+                        <label for="jurusan">Pilihan Jurusan:</label>
+                        <select id="jurusan" name="jurusan" required>
+                            <option value="">Pilih Jurusan</option>
+                            <option value="IPA">Ilmu Pengetahuan Alam (IPA)</option>
+                            <option value="IPS">Ilmu Pengetahuan Sosial (IPS)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="alasan">Alasan Memilih Jurusan:</label>
+                        <textarea id="alasan" name="alasan" rows="3" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Upload Dokumen</h3>
+                    <div class="form-group">
+                        <label for="foto">Pas Foto 3x4 (jpg/png, max 2MB):</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ijazah">Scan Ijazah (pdf, max 5MB):</label>
+                        <input type="file" id="ijazah" name="ijazah" accept=".pdf" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skhun">Scan SKHUN (pdf, max 5MB):</label>
+                        <input type="file" id="skhun" name="skhun" accept=".pdf" required>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                    <label for="persetujuan">Saya menyatakan bahwa semua data yang diisi adalah benar dan siap menerima sanksi jika terdapat data palsu.</label>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn btn-primary">Kirim Pendaftaran</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 SIPENA SMANIKA - SPMB SMAN 1 KARANGNUNGGAL</p>
+        <p>Jl. Raya Karangnunggal No. 123, Kab. Tasikmalaya, Jawa Barat</p>
+        <p>Email: smanika@sman1karangnunggal.sch.id | Telp: (0265) 123456</p>
+    </footer>
+</body>
+</html>
